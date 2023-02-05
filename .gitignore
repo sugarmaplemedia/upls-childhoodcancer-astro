@@ -20,3 +20,6 @@ pnpm-debug.log*
 
 # Old site files
 _old/
+
+# VS Code files
+.vscode/

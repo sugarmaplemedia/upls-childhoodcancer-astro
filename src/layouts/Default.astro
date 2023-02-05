@@ -1,0 +1,31 @@
+---
+import Header from "@components/Header.svelte"
+import "@styles/reset.css"
+import "@styles/main.css"
+
+const { title, description } = Astro.props
+---
+
+<html lang="en">
+    <head>
+        <title>{title ? `${title} | ` : "" }U.P. Lions Serve: Childhood Cancer</title>
+        <meta name="description" content={description} />
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        
+        <link rel="stylesheet" href="https://use.typekit.net/zhd4kcf.css" />
+        <link rel="apple-touch-icon" sizes="180x180" href="/assets/graphics/logo180.png" />
+        <link rel="icon" type="image/png" sizes="32x32" href="/assets/graphics/logo32.png" />
+    </head>
+    <body>
+        <Header client:load />
+        <div id="lightbox">
+            <div class="lightboxContainer">
+                <img />
+            </div>
+        </div>
+        <main id="cause">
+            <slot />
+        </main>
+    </body>
+</html>
